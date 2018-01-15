@@ -15,3 +15,14 @@
 
 ### 3. arrow functions
     箭头函数,简化函数
+
+### 4. template stirng
+    模板字符串
+    反引号\标示开始
+    ${}引用变量
+
+### 5. destructuring
+    解构
+
+### 6. default, rest
+    默认值,扩展符

@@ -54,6 +54,7 @@
         let cat = new Cat()
         cat.says('hehe')
 */
+/*
         test = function (i) {
             i += 1
             return i + 1
@@ -61,6 +62,47 @@
         console.log(test(6))
         ts2 = (i) => { i += 1;return i*2}
         console.log(ts2(2))
+*/
+/*
+        class Animal {
+            constructor(){
+                this.type = 'animal'
+            }
+            says(say){
+                setTimeout(() => {console.log(this.type 
+                + ' say ' + say)} ,1000)
+            }
+        }
+        let animal = new Animal()
+        animal.says('hi')
+*/
+/*
+        let dog = 'daw'
+        let pig = 'mm'
+        let zoom = {dog, pig}
+        console.log(zoom)
+*/
+/*
+        let dog = {type: 'animals',num:2}
+        let {type, num} = dog
+        console.log(type);
+*/
+/*
+        function animal(type) {
+            type = type || 'cat'
+            console.log(type)
+        }
+        animal()
+*/
+        function animal(type = 'pig') {
+            console.log(type)
+        }
+        animal()
+
+        function echo(...type) {
+            console.log(type)
+        }
+        echo('cat', 'pig', 'dog')
     </script>
 </head>
 <body>
