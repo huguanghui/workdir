@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // let,const
+/*
+        // var的缺点一.无块级作用域
+        let name = '1';
+        while(true)
+        {
+            let name = "abc";
+            console.log(name);
+            break;
+        }
+        console.log(name);
+*/
+/*
+        // var的缺点二:循环变量泄露味全局变量
+        var a = [];
+        for (let i = 0; i < 10; i++) {
+            a[i] = function() {
+                console.log(i);
+            }
+        }
+        a[6]();
+*/
+/*
+        const PI = Math.PI;
+        console.log(PI);
+        PI = 32;
+*/
+/*
+        class Animal {
+            constructor(){
+                this.type = 'animal'
+            }
+            says(say){
+                console.log(this.type + ' says ' + say)
+            }
+        }
+        let animal = new Animal()
+        animal.says('hello')
+
+        class Cat extends Animal {
+            constructor(){
+                super()
+                this.type = 'cat'
+            }
+        }
+        let cat = new Cat()
+        cat.says('hehe')
+*/
+        test = function (i) {
+            i += 1
+            return i + 1
+        }
+        console.log(test(6))
+        ts2 = (i) => { i += 1;return i*2}
+        console.log(ts2(2))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
