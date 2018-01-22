@@ -1,0 +1,1615 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>Node_Vue</title></head><body><article class="markdown-body"><div class="toc">
+<ul>
+<li><a href="#_1">专业术语</a></li>
+<li><a href="#vue">Vue工程框架</a></li>
+<li><a href="#vue_1">Vue文件结构</a><ul>
+<li><a href="#_2">样式表</a></li>
+<li><a href="#_3">模板</a></li>
+<li><a href="#js">JS逻辑处理</a></li>
+</ul>
+</li>
+<li><a href="#vue_2">Vue的生命周期</a></li>
+<li><a href="#vue_3">Vue基本组件</a></li>
+<li><a href="#v-ifv-show">v-if和v-show的差别</a></li>
+<li><a href="#vuedemon">Vue的入门Demon</a></li>
+<li><a href="#vuejs">Vue.js模板语法整理</a><ul>
+<li><a href="#1">1.插值</a><ul>
+<li><a href="#11">1.1 文本</a></li>
+<li><a href="#12-htmlv-html">1.2 Html(v-html指令)</a></li>
+<li><a href="#13-v-bind">1.3 属性(v-bind指令)</a></li>
+<li><a href="#14">1.4 表达式</a></li>
+</ul>
+</li>
+<li><a href="#2">2.指令</a><ul>
+<li><a href="#21">2.1 参数</a></li>
+<li><a href="#22">2.2 修饰符</a></li>
+</ul>
+</li>
+<li><a href="#3">3.用户输入</a></li>
+<li><a href="#40">4.0 过滤器</a></li>
+<li><a href="#50">5.0 缩写</a></li>
+<li><a href="#60-vue">6.0 Vue实例</a><ul>
+<li><a href="#61">6.1 构造器</a></li>
+<li><a href="#62-data">6.2 代理data对象里面的所有属性</a></li>
+<li><a href="#63">6.3 属性和方法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_4">条件语句</a><ul>
+<li><a href="#a-v-if-v-else-v-else-if">a. v-if, v-else, v-else-if</a></li>
+<li><a href="#b-v-show">b. v-show</a></li>
+</ul>
+</li>
+<li><a href="#_5">循环语句</a><ul>
+<li><a href="#a-v-for">a. v-for指令</a></li>
+</ul>
+</li>
+<li><a href="#_6">计算属性</a><ul>
+<li><a href="#computed">计算属性关键词:computed.</a></li>
+</ul>
+</li>
+<li><a href="#_7">样式绑定</a><ul>
+<li><a href="#aclass">a.class属性</a></li>
+<li><a href="#bstyle">b.style内嵌样式</a></li>
+</ul>
+</li>
+<li><a href="#_8">事件处理器</a><ul>
+<li><a href="#a">a.事件修饰符</a></li>
+<li><a href="#b">b.按键修饰符</a></li>
+</ul>
+</li>
+<li><a href="#v-model">表单(v-model)</a><ul>
+<li><a href="#_9">修饰符</a></li>
+</ul>
+</li>
+<li><a href="#_10">组件</a><ul>
+<li><a href="#a_1">a.创建全局组件</a></li>
+<li><a href="#b_1">b.创建局部组件</a></li>
+<li><a href="#c-prop">c. Prop</a></li>
+<li><a href="#d">d. 自定义事件</a></li>
+<li><a href="#e-vueuse">e. Vue.use()原理</a></li>
+</ul>
+</li>
+<li><a href="#_11">自定义指令</a><ul>
+<li><a href="#a_2">a. 注册全局自定义指令</a></li>
+<li><a href="#b_2">b. 注册局部自定义指令</a></li>
+<li><a href="#c">c. 钩子</a></li>
+</ul>
+</li>
+<li><a href="#_12">路由</a></li>
+<li><a href="#vuex">Vuex</a><ul>
+<li><a href="#_13">概念</a></li>
+<li><a href="#_14">应用场景</a></li>
+<li><a href="#_15">源码框架</a></li>
+</ul>
+</li>
+<li><a href="#store">Store</a><ul>
+<li><a href="#_16">概念</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>专业术语</h2>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="right">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">MVVM模型(Model-View-ViewModel)</td>
+<td align="right">基于MVP框架把WPF的新特性糅合进去.软件UI层更加细节化和可定制.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html">MVC,MVP,MVVM模型</a></p>
+<h2 id="vue"><a name="user-content-vue" href="#vue" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vue工程框架</h2>
+<p><img alt="" src="img/s_1.png" /><br />
+可以使用Bootstrap作为后台框架,使用Vue模板去渲染.<br />
+1.build和config文件主要是webpack打包和端口的信息配置<br />
+2.dist是打包后会生成的文件<br />
+3.node_module是webpack的依赖模块<br />
+4.static主要存放静态资源<br />
+5.src主要存放的是当前的项目文件,一般由components和module两部分组成</p>
+<h2 id="vue_1"><a name="user-content-vue_1" href="#vue_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vue文件结构</h2>
+<h3 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>样式表</h3>
+<pre><code>&lt;style scoped&gt;
+    @import "../../../static/css/plugin/footable.core.mim.css"
+&lt;/style&gt;
+</code></pre>
+<h3 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>模板</h3>
+<pre><code>&lt;template&gt;
+    // TODO
+&lt;/template&gt;
+</code></pre>
+<h3 id="js"><a name="user-content-js" href="#js" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>JS逻辑处理</h3>
+<pre><code>&lt;script&gt;
+    // TODO
+&lt;/script&gt;
+</code></pre>
+<h2 id="vue_2"><a name="user-content-vue_2" href="#vue_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vue的生命周期</h2>
+<pre><code>开始创建-&gt;初始化数据-&gt;编译模板-&gt;挂载Dom-&gt;(渲染-&gt;更新-&gt;渲染)-&gt;卸载.
+</code></pre>
+<h2 id="vue_3"><a name="user-content-vue_3" href="#vue_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vue基本组件</h2>
+<pre><code>new Vue({
+    el,    //要绑定的DOM element
+    data,  //要绑定的资料
+    props, //可用来接收父原件资料的属性
+    template, //要解析的模块,可以是#id, HTTP或某个DOM element实体
+    computed, //定义资料的getter和setter,即需要计算后才能使用的值
+    components, //定义子元件,可用ES6简写法 例如(MyHeader)
+    methods,   //定义可以在元件或样版类使用的方法
+    propsData,  //存放预设的props内容,方便测试使用
+    relplace,   //要不要用template取代el指向DOM Element预设为true
+})
+</code></pre>
+<h2 id="v-ifv-show"><a name="user-content-v-ifv-show" href="#v-ifv-show" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>v-if和v-show的差别</h2>
+<pre><code>最大差别在于对DOM的操作.
+v-if会依照条件决定是否将原件渲染至网页上,并决定时间于材料的监听是否要绑定至原件或直接销毁该原件.
+v-show必定会产生原件,但以条件来切换css的实现与否,若条件改变频繁,用v-show切换更合适.
+</code></pre>
+<h2 id="vuedemon"><a name="user-content-vuedemon" href="#vuedemon" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vue的入门Demon</h2>
+<p><a href="https://github.com/keepfool/vue-tutorials">GIT_SOURCE(基于Vue1.0)</a></p>
+<h2 id="vuejs"><a name="user-content-vuejs" href="#vuejs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vue.js模板语法整理</h2>
+<h3 id="1"><a name="user-content-1" href="#1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.插值</h3>
+<h4 id="11"><a name="user-content-11" href="#11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.1 文本</h4>
+<pre><code>&lt;div id="app"&gt;
+ &lt;p&gt;{{ message }}&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="12-htmlv-html"><a name="user-content-12-htmlv-html" href="#12-htmlv-html" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.2 Html(v-html指令)</h4>
+<pre><code>&lt;div id="app"&gt;
+ &lt;div v-html="message"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+new Vue({
+    el: '#app',
+    data: {
+        message: '&lt;h1&gt;Head&lt;h1&gt;'
+    }
+})
+&lt;/script&gt;
+</code></pre>
+<h4 id="13-v-bind"><a name="user-content-13-v-bind" href="#13-v-bind" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.3 属性(v-bind指令)</h4>
+<pre><code>&lt;div id="app"&gt;
+    &lt;label for="r1"&gt;修改颜色&lt;/label&gt;&lt;input type="checkbox" v-model="class1" id="r1"&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;div v-bind:class="{'class1':class1}"&gt;
+        directiva v-bind:class
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+new Vue({
+    el: '#app',
+  data:{
+      class1: false
+  }
+});  
+&lt;/script&gt;
+</code></pre>
+<h4 id="14"><a name="user-content-14" href="#14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.4 表达式</h4>
+<pre><code>&lt;div id="app"&gt;
+    {{5+5}}&lt;br&gt;
+    {{ ok ? 'YES' : 'NO' }}&lt;br&gt;
+    {{ message.split('').reverse().join('') }}
+    &lt;div v-bind:id="'list-' + id"&gt;菜鸟教程&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+new Vue({
+  el: '#app',
+  data: {
+    ok: true,
+    message: 'RUNOOB',
+    id : 1
+  }
+})
+&lt;/script&gt;
+</code></pre>
+<h3 id="2"><a name="user-content-2" href="#2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.指令</h3>
+<p>指令是带有v-前缀的特殊属性<br />
+指令用于在表达式的值发生改变时,将某些行为应用到DOM上.</p>
+<h4 id="21"><a name="user-content-21" href="#21" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.1 参数</h4>
+<pre><code>v-if v-bind v-on
+</code></pre>
+<h4 id="22"><a name="user-content-22" href="#22" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.2 修饰符</h4>
+<pre><code>修饰符是以半角句号.指明的特殊后缀,用于指出一个指定应该以特殊方式绑定.
+.prevent修饰符告诉v-on指令对于触发的事件调用event.preventDefault()
+</code></pre>
+<h3 id="3"><a name="user-content-3" href="#3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.用户输入</h3>
+<pre><code>input输入框中用v-model指令来实现双向数据绑定.
+&lt;div id="app"&gt;
+    &lt;p&gt;{{ message }}&lt;/p&gt;
+    &lt;input v-model="message"&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Runoob!'
+  }
+})
+&lt;/script&gt;
+
+字符串反转
+&lt;div id="app"&gt;
+    &lt;p&gt;{{ message }}&lt;/p&gt;
+    &lt;button v-on:click="reverseMessage"&gt;反转字符串&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Runoob!'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+})
+&lt;/script&gt;
+</code></pre>
+<h3 id="40"><a name="user-content-40" href="#40" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.0 过滤器</h3>
+<pre><code>vue.js允许自定义过滤器,用于常见文本的格式化.由管道符表示.
+&lt;!-- 在两个大括号中 --&gt;
+{{ message | capitalize }}
+
+&lt;!-- 在 v-bind 指令中 --&gt;
+&lt;div v-bind:id="rawId | formatId"&gt;&lt;/div&gt;
+
+第一个字符改为大写
+&lt;div id="app"&gt;
+  {{ message | capitalize }}
+&lt;/div&gt;
+
+&lt;script&gt;
+new Vue({
+  el: '#app',
+  data: {
+    message: 'runoob'
+  },
+  filters: {
+    capitalize: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
+  }
+})
+&lt;/script&gt;
+</code></pre>
+<h3 id="50"><a name="user-content-50" href="#50" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.0 缩写</h3>
+<pre><code>&lt;!-- 完整语法 --&gt;
+&lt;a v-bind:href="url"&gt;&lt;/a&gt;
+&lt;!-- 缩写 --&gt;
+&lt;a :href="url"&gt;&lt;/a&gt;
+
+&lt;!-- 完整语法 --&gt;
+&lt;a v-on:click="doSomething"&gt;&lt;/a&gt;
+&lt;!-- 缩写 --&gt;
+&lt;a @click="doSomething"&gt;&lt;/a&gt;
+</code></pre>
+<h3 id="60-vue"><a name="user-content-60-vue" href="#60-vue" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6.0 Vue实例</h3>
+<h4 id="61"><a name="user-content-61" href="#61" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6.1 构造器</h4>
+<pre><code>var vm = new Vue({
+      // 选项
+    })
+</code></pre>
+<h4 id="62-data"><a name="user-content-62-data" href="#62-data" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6.2 代理data对象里面的所有属性</h4>
+<pre><code>每个Vue实例都会代理其data对象里面的所有属性
+var data = { a: 1 }
+var vm = new Vue({
+  data: data
+})
+vm.a === data.a // -&gt; true
+// 设置属性也会影响到原始数据
+vm.a = 2
+data.a // -&gt; 2
+// ... 反之亦然
+data.a = 3
+vm.a // -&gt; 3
+</code></pre>
+<h4 id="63"><a name="user-content-63" href="#63" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6.3 属性和方法</h4>
+<pre><code>var data = { a: 1 }
+var vm = new Vue({
+  el: '#example',
+  data: data
+})
+vm.$data === data // -&gt; true
+vm.$el === document.getElementById('example') // -&gt; true
+// $watch 是一个实例方法
+vm.$watch('a', function (newVal, oldVal) {
+  // 这个回调将在 `vm.a`  改变后调用
+})
+</code></pre>
+<h2 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>条件语句</h2>
+<h3 id="a-v-if-v-else-v-else-if"><a name="user-content-a-v-if-v-else-v-else-if" href="#a-v-if-v-else-v-else-if" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a. v-if, v-else, v-else-if</h3>
+<pre><code>&lt;div id="app"&gt;
+    &lt;div v-if="type === 'A'"&gt;
+      A
+    &lt;/div&gt;
+    &lt;div v-else-if="type === 'B'"&gt;
+      B
+    &lt;/div&gt;
+    &lt;div v-else-if="type === 'C'"&gt;
+      C
+    &lt;/div&gt;
+    &lt;div v-else&gt;
+      Not A/B/C
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+new Vue({
+  el: '#app',
+  data: {
+    type: 'C'
+  }
+})
+&lt;/script&gt;
+</code></pre>
+<h3 id="b-v-show"><a name="user-content-b-v-show" href="#b-v-show" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>b. v-show</h3>
+<pre><code>&lt;h1 v-show="ok"&gt;Hello!&lt;/h1&gt;
+</code></pre>
+<h2 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>循环语句</h2>
+<h3 id="a-v-for"><a name="user-content-a-v-for" href="#a-v-for" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a. v-for指令</h3>
+<pre><code>(参数, 键值，序号)
+&lt;div id="app"&gt;
+  &lt;ol&gt;
+    &lt;li v-for="site in sites"&gt;
+      {{ site.name }}
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+new Vue({
+  el: '#app',
+  data: {
+    sites: [
+      { name: 'Runoob' },
+      { name: 'Google' },
+      { name: 'Taobao' }
+    ]
+  }
+})
+&lt;/script&gt;
+</code></pre>
+<h2 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>计算属性</h2>
+<h3 id="computed"><a name="user-content-computed" href="#computed" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>计算属性关键词:computed.</h3>
+<pre><code>&lt;div id="app"&gt;
+  &lt;p&gt;原始字符串: {{ message }}&lt;/p&gt;
+  &lt;p&gt;计算后反转字符串: {{ reversedMessage }}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var vm = new Vue({
+  el: '#app',
+  data: {
+    message: 'Runoob!'
+  },
+  computed: {
+    // 计算属性的 getter
+    reversedMessage: function () {
+      // `this` 指向 vm 实例
+      return this.message.split('').reverse().join('')
+    }
+  }
+})
+&lt;/script&gt;
+
+var vm = new Vue({
+  el: '#app',
+  data: {
+    name: 'Google',
+    url: 'http://www.google.com'
+  },
+  computed: {
+    site: {
+      // getter
+      get: function () {
+        return this.name + ' ' + this.url
+      },
+      // setter
+      set: function (newValue) {
+        var names = newValue.split(' ')
+        this.name = names[0]
+        this.url = names[names.length - 1]
+      }
+    }
+  }
+})
+// 调用 setter， vm.name 和 vm.url 也会被对应更新
+vm.site = '菜鸟教程 http://www.runoob.com';
+document.write('name: ' + vm.name);
+document.write('&lt;br&gt;');
+document.write('url: ' + vm.url);
+</code></pre>
+<h2 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>样式绑定</h2>
+<pre><code>class和style是HTML元素的属性,用于设置元素的样式.可以用v-bind设置样式.
+</code></pre>
+<h3 id="aclass"><a name="user-content-aclass" href="#aclass" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a.class属性</h3>
+<h3 id="bstyle"><a name="user-content-bstyle" href="#bstyle" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>b.style内嵌样式</h3>
+<h2 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>事件处理器</h2>
+<h3 id="a"><a name="user-content-a" href="#a" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a.事件修饰符</h3>
+<pre><code>.stop   // 阻止单击事件冒泡
+.prevent  //
+.capture  // 添加事件监听器时使用事件捕获模式
+.self     // 事件在该元素本身
+.once     // 事件只能点击一次
+</code></pre>
+<h3 id="b"><a name="user-content-b" href="#b" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>b.按键修饰符</h3>
+<pre><code>.enter
+.tab
+.delete
+.esc
+.space
+.up
+.down
+.left
+.right
+.ctrl
+.alt
+.shift
+.meta
+</code></pre>
+<h2 id="v-model"><a name="user-content-v-model" href="#v-model" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>表单(v-model)</h2>
+<ul>
+<li>输入框</li>
+<li>复选框</li>
+<li>单选按钮</li>
+<li>列表</li>
+</ul>
+<h3 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>修饰符</h3>
+<pre><code>.lazy
+.number
+.trim
+</code></pre>
+<h2 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>组件</h2>
+<pre><code>组件系统可以独立复用小组件来构建大型应用,几乎任意类型的应用界面都可以抽象为组件树.
+</code></pre>
+<ul>
+<li>
+<p>注册一个全局组件<br />
+    Vue.component(tagName, options)</p>
+</li>
+<li>
+<p>调用组件<br />
+    <tagName></tagName></p>
+</li>
+</ul>
+<h3 id="a_1"><a name="user-content-a_1" href="#a_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a.创建全局组件</h3>
+<pre><code>&lt;div id="app"&gt;
+    &lt;runoob&gt;&lt;/runoob&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// 注册
+Vue.component('runoob', {
+  template: '&lt;h1&gt;自定义组件!&lt;/h1&gt;'
+})
+// 创建根实例
+new Vue({
+  el: '#app'
+})
+&lt;/script&gt;
+</code></pre>
+<h3 id="b_1"><a name="user-content-b_1" href="#b_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>b.创建局部组件</h3>
+<pre><code>&lt;div id="app"&gt;
+    &lt;runoob&gt;&lt;/runoob&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var Child = {
+  template: '&lt;h1&gt;自定义组件!&lt;/h1&gt;'
+}
+
+// 创建根实例
+new Vue({
+  el: '#app',
+  components: {
+    // &lt;runoob&gt; 将只在父模板可用
+    'runoob': Child
+  }
+})
+&lt;/script&gt;
+</code></pre>
+<h3 id="c-prop"><a name="user-content-c-prop" href="#c-prop" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>c. Prop</h3>
+<h3 id="d"><a name="user-content-d" href="#d" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>d. 自定义事件</h3>
+<ul>
+<li>$on 监听事件</li>
+<li>$emit 触发事件</li>
+</ul>
+<h3 id="e-vueuse"><a name="user-content-e-vueuse" href="#e-vueuse" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>e. Vue.use()原理</h3>
+<p>调用Vue.use</p>
+<h2 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>自定义指令</h2>
+<h3 id="a_2"><a name="user-content-a_2" href="#a_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a. 注册全局自定义指令</h3>
+<pre><code>&lt;div id="app"&gt;
+    &lt;p&gt;页面载入时，input 元素自动获取焦点：&lt;/p&gt;
+    &lt;input v-focus&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// 注册一个全局自定义指令 v-focus
+Vue.directive('focus', {
+  // 当绑定元素插入到 DOM 中。
+  inserted: function (el) {
+    // 聚焦元素
+    el.focus()
+  }
+})
+// 创建根实例
+new Vue({
+  el: '#app'
+})
+&lt;/script&gt;
+</code></pre>
+<h3 id="b_2"><a name="user-content-b_2" href="#b_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>b. 注册局部自定义指令</h3>
+<pre><code>&lt;div id="app"&gt;
+  &lt;p&gt;页面载入时，input 元素自动获取焦点：&lt;/p&gt;
+  &lt;input v-focus&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// 创建根实例
+new Vue({
+  el: '#app',
+  directives: {
+    // 注册一个局部的自定义指令 v-focus
+    focus: {
+      // 指令的定义
+      inserted: function (el) {
+        // 聚焦元素
+        el.focus()
+      }
+    }
+  }
+})
+&lt;/script&gt;
+</code></pre>
+<h3 id="c"><a name="user-content-c" href="#c" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>c. 钩子</h3>
+<h2 id="_12"><a name="user-content-_12" href="#_12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>路由</h2>
+<h2 id="vuex"><a name="user-content-vuex" href="#vuex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vuex</h2>
+<h3 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>概念</h3>
+<p>Vuex是一个专为Vue.js应用程序开发的状态管理模式.集中存储和管理应用的所有组件状态.<br />
+  状态:数据<br />
+  集中存储:store<br />
+  管理:计算和处理数据</p>
+<h3 id="_14"><a name="user-content-_14" href="#_14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>应用场景</h3>
+<ol>
+<li>多组件依赖同一份数据</li>
+<li>一个组件的行为-&gt;改变数据-&gt;影响另一个组件的视图<br />
+  Vuex将组件公用数据抽离出来在一个公共仓库管理,使得各个组件容易获取数据和设置数据.</li>
+</ol>
+<h3 id="_15"><a name="user-content-_15" href="#_15" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>源码框架</h3>
+<p><img alt="" src="img/s_2.png" /></p>
+<h2 id="store"><a name="user-content-store" href="#store" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Store</h2>
+<h3 id="_16"><a name="user-content-_16" href="#_16" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>概念</h3>
+<p>Store是一个仓库.state就是数据源存放地.对应于一般Vue对象里面的data(后面的actions和mutations对应于methods)<br />
+  创建Store实例new Vuex.store({state,getters,mutations,actions}),有很多子模块的时候会用到modules<br />
+<img alt="" src="img/s_3.png" /></p></article></body></html>
