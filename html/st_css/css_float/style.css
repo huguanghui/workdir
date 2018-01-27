@@ -1,0 +1,13 @@
+.container {
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+}
+
+.container .content {
+	float: left;
+	width: 150px;
+	height: 150px;
+	background-color: lightpink;
+	margin: 5px;
+}
