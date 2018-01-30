@@ -1016,11 +1016,12 @@ body .markdown-body
 }
 </style><title>Node_Vue</title></head><body><article class="markdown-body"><div class="toc">
 <ul>
-<li><a href="#_1">专业术语</a></li>
+<li><a href="#_1">常用链接</a></li>
+<li><a href="#_2">专业术语</a></li>
 <li><a href="#vue">Vue工程框架</a></li>
 <li><a href="#vue_1">Vue文件结构</a><ul>
-<li><a href="#_2">样式表</a></li>
-<li><a href="#_3">模板</a></li>
+<li><a href="#_3">样式表</a></li>
+<li><a href="#_4">模板</a></li>
 <li><a href="#js">JS逻辑处理</a></li>
 </ul>
 </li>
@@ -1052,34 +1053,34 @@ body .markdown-body
 </li>
 </ul>
 </li>
-<li><a href="#_4">条件语句</a><ul>
+<li><a href="#_5">条件语句</a><ul>
 <li><a href="#a-v-if-v-else-v-else-if">a. v-if, v-else, v-else-if</a></li>
 <li><a href="#b-v-show">b. v-show</a></li>
 </ul>
 </li>
-<li><a href="#_5">循环语句</a><ul>
+<li><a href="#_6">循环语句</a><ul>
 <li><a href="#a-v-for">a. v-for指令</a></li>
 </ul>
 </li>
-<li><a href="#_6">计算属性</a><ul>
+<li><a href="#_7">计算属性</a><ul>
 <li><a href="#computed">计算属性关键词:computed.</a></li>
 </ul>
 </li>
-<li><a href="#_7">样式绑定</a><ul>
+<li><a href="#_8">样式绑定</a><ul>
 <li><a href="#aclass">a.class属性</a></li>
 <li><a href="#bstyle">b.style内嵌样式</a></li>
 </ul>
 </li>
-<li><a href="#_8">事件处理器</a><ul>
+<li><a href="#_9">事件处理器</a><ul>
 <li><a href="#a">a.事件修饰符</a></li>
 <li><a href="#b">b.按键修饰符</a></li>
 </ul>
 </li>
 <li><a href="#v-model">表单(v-model)</a><ul>
-<li><a href="#_9">修饰符</a></li>
+<li><a href="#_10">修饰符</a></li>
 </ul>
 </li>
-<li><a href="#_10">组件</a><ul>
+<li><a href="#_11">组件</a><ul>
 <li><a href="#a_1">a.创建全局组件</a></li>
 <li><a href="#b_1">b.创建局部组件</a></li>
 <li><a href="#c-prop">c. Prop</a></li>
@@ -1087,27 +1088,31 @@ body .markdown-body
 <li><a href="#e-vueuse">e. Vue.use()原理</a></li>
 </ul>
 </li>
-<li><a href="#_11">自定义指令</a><ul>
+<li><a href="#_12">自定义指令</a><ul>
 <li><a href="#a_2">a. 注册全局自定义指令</a></li>
 <li><a href="#b_2">b. 注册局部自定义指令</a></li>
 <li><a href="#c">c. 钩子</a></li>
 </ul>
 </li>
-<li><a href="#_12">路由</a></li>
+<li><a href="#_13">路由</a></li>
 <li><a href="#vuex">Vuex</a><ul>
-<li><a href="#_13">概念</a></li>
-<li><a href="#_14">应用场景</a></li>
-<li><a href="#_15">源码框架</a></li>
+<li><a href="#_14">概念</a></li>
+<li><a href="#_15">应用场景</a></li>
+<li><a href="#_16">源码框架</a></li>
 </ul>
 </li>
 <li><a href="#store">Store</a><ul>
-<li><a href="#_16">概念</a></li>
+<li><a href="#_17">概念</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <hr />
-<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>专业术语</h2>
+<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>常用链接</h2>
+<p><a href="https://cn.vuejs.org/v2/api/">Vue的API</a><br />
+<a href="https://cn.vuejs.org/v2/style-guide/#%E7%BB%84%E4%BB%B6-%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%89%E9%A1%B9%E7%9A%84%E9%A1%BA%E5%BA%8F-%E6%8E%A8%E8%8D%90">Vue的编程风格</a><br />
+<a href="https://cn.vuejs.org/v2/examples/index.html">Vue样例</a></p>
+<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>专业术语</h2>
 <table>
 <thead>
 <tr>
@@ -1124,7 +1129,7 @@ body .markdown-body
 </table>
 <p><a href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html">MVC,MVP,MVVM模型</a></p>
 <h2 id="vue"><a name="user-content-vue" href="#vue" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vue工程框架</h2>
-<p><img alt="" src="img/s_1.png" /><br />
+<p><img alt="" src="///Z://GIT/workdir/html/vue/img/s_1.png" /><br />
 可以使用Bootstrap作为后台框架,使用Vue模板去渲染.<br />
 1.build和config文件主要是webpack打包和端口的信息配置<br />
 2.dist是打包后会生成的文件<br />
@@ -1132,12 +1137,12 @@ body .markdown-body
 4.static主要存放静态资源<br />
 5.src主要存放的是当前的项目文件,一般由components和module两部分组成</p>
 <h2 id="vue_1"><a name="user-content-vue_1" href="#vue_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vue文件结构</h2>
-<h3 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>样式表</h3>
+<h3 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>样式表</h3>
 <pre><code>&lt;style scoped&gt;
     @import "../../../static/css/plugin/footable.core.mim.css"
 &lt;/style&gt;
 </code></pre>
-<h3 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>模板</h3>
+<h3 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>模板</h3>
 <pre><code>&lt;template&gt;
     // TODO
 &lt;/template&gt;
@@ -1347,7 +1352,7 @@ vm.$watch('a', function (newVal, oldVal) {
   // 这个回调将在 `vm.a`  改变后调用
 })
 </code></pre>
-<h2 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>条件语句</h2>
+<h2 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>条件语句</h2>
 <h3 id="a-v-if-v-else-v-else-if"><a name="user-content-a-v-if-v-else-v-else-if" href="#a-v-if-v-else-v-else-if" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a. v-if, v-else, v-else-if</h3>
 <pre><code>&lt;div id="app"&gt;
     &lt;div v-if="type === 'A'"&gt;
@@ -1376,7 +1381,7 @@ new Vue({
 <h3 id="b-v-show"><a name="user-content-b-v-show" href="#b-v-show" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>b. v-show</h3>
 <pre><code>&lt;h1 v-show="ok"&gt;Hello!&lt;/h1&gt;
 </code></pre>
-<h2 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>循环语句</h2>
+<h2 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>循环语句</h2>
 <h3 id="a-v-for"><a name="user-content-a-v-for" href="#a-v-for" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a. v-for指令</h3>
 <pre><code>(参数, 键值，序号)
 &lt;div id="app"&gt;
@@ -1400,7 +1405,7 @@ new Vue({
 })
 &lt;/script&gt;
 </code></pre>
-<h2 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>计算属性</h2>
+<h2 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>计算属性</h2>
 <h3 id="computed"><a name="user-content-computed" href="#computed" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>计算属性关键词:computed.</h3>
 <pre><code>&lt;div id="app"&gt;
   &lt;p&gt;原始字符串: {{ message }}&lt;/p&gt;
@@ -1450,12 +1455,12 @@ document.write('name: ' + vm.name);
 document.write('&lt;br&gt;');
 document.write('url: ' + vm.url);
 </code></pre>
-<h2 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>样式绑定</h2>
+<h2 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>样式绑定</h2>
 <pre><code>class和style是HTML元素的属性,用于设置元素的样式.可以用v-bind设置样式.
 </code></pre>
 <h3 id="aclass"><a name="user-content-aclass" href="#aclass" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a.class属性</h3>
 <h3 id="bstyle"><a name="user-content-bstyle" href="#bstyle" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>b.style内嵌样式</h3>
-<h2 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>事件处理器</h2>
+<h2 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>事件处理器</h2>
 <h3 id="a"><a name="user-content-a" href="#a" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a.事件修饰符</h3>
 <pre><code>.stop   // 阻止单击事件冒泡
 .prevent  //
@@ -1485,12 +1490,12 @@ document.write('url: ' + vm.url);
 <li>单选按钮</li>
 <li>列表</li>
 </ul>
-<h3 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>修饰符</h3>
+<h3 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>修饰符</h3>
 <pre><code>.lazy
 .number
 .trim
 </code></pre>
-<h2 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>组件</h2>
+<h2 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>组件</h2>
 <pre><code>组件系统可以独立复用小组件来构建大型应用,几乎任意类型的应用界面都可以抽象为组件树.
 </code></pre>
 <ul>
@@ -1547,7 +1552,7 @@ new Vue({
 </ul>
 <h3 id="e-vueuse"><a name="user-content-e-vueuse" href="#e-vueuse" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>e. Vue.use()原理</h3>
 <p>调用Vue.use</p>
-<h2 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>自定义指令</h2>
+<h2 id="_12"><a name="user-content-_12" href="#_12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>自定义指令</h2>
 <h3 id="a_2"><a name="user-content-a_2" href="#a_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>a. 注册全局自定义指令</h3>
 <pre><code>&lt;div id="app"&gt;
     &lt;p&gt;页面载入时，input 元素自动获取焦点：&lt;/p&gt;
@@ -1593,23 +1598,24 @@ new Vue({
 &lt;/script&gt;
 </code></pre>
 <h3 id="c"><a name="user-content-c" href="#c" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>c. 钩子</h3>
-<h2 id="_12"><a name="user-content-_12" href="#_12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>路由</h2>
+<h2 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>路由</h2>
 <h2 id="vuex"><a name="user-content-vuex" href="#vuex" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vuex</h2>
-<h3 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>概念</h3>
+<h3 id="_14"><a name="user-content-_14" href="#_14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>概念</h3>
 <p>Vuex是一个专为Vue.js应用程序开发的状态管理模式.集中存储和管理应用的所有组件状态.<br />
   状态:数据<br />
   集中存储:store<br />
-  管理:计算和处理数据</p>
-<h3 id="_14"><a name="user-content-_14" href="#_14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>应用场景</h3>
+  管理:计算和处理数据<br />
+<img alt="" src="///Z://GIT/workdir/html/vue/img/vuex_1.png" /></p>
+<h3 id="_15"><a name="user-content-_15" href="#_15" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>应用场景</h3>
 <ol>
 <li>多组件依赖同一份数据</li>
 <li>一个组件的行为-&gt;改变数据-&gt;影响另一个组件的视图<br />
   Vuex将组件公用数据抽离出来在一个公共仓库管理,使得各个组件容易获取数据和设置数据.</li>
 </ol>
-<h3 id="_15"><a name="user-content-_15" href="#_15" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>源码框架</h3>
-<p><img alt="" src="img/s_2.png" /></p>
+<h3 id="_16"><a name="user-content-_16" href="#_16" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>源码框架</h3>
+<p><img alt="" src="///Z://GIT/workdir/html/vue/img/s_2.png" /></p>
 <h2 id="store"><a name="user-content-store" href="#store" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Store</h2>
-<h3 id="_16"><a name="user-content-_16" href="#_16" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>概念</h3>
+<h3 id="_17"><a name="user-content-_17" href="#_17" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>概念</h3>
 <p>Store是一个仓库.state就是数据源存放地.对应于一般Vue对象里面的data(后面的actions和mutations对应于methods)<br />
   创建Store实例new Vuex.store({state,getters,mutations,actions}),有很多子模块的时候会用到modules<br />
-<img alt="" src="img/s_3.png" /></p></article></body></html>
+<img alt="" src="///Z://GIT/workdir/html/vue/img/s_3.png" /></p></article></body></html>
