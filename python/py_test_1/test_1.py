@@ -10,7 +10,10 @@ print (os.getcwd())
 
 fd = os.open("test.log", os.O_RDWR|os.O_CREAT)
 
-os.write(fd, )
+str = "aabbcc"
+ret = os.write(fd, bytes(str, 'UTF-8'))
+
+print (ret)
 
 os.close(fd)
 
