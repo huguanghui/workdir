@@ -1,6 +1,9 @@
 [TOC]
 
 ---
+### 链接
+[gSoap官网](http://www.cs.fsu.edu/~engelen/soap.html)
+
 ### 环境搭建
 - zlib
 http://www.zlib.net/zlib-1.2.11.tar.gz

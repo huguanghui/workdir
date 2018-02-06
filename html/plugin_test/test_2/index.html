@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Firebreath控件测试页面</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <!-- Plugin -->
+    <div>
+        <object id="plugin" type="application/x-testdemo" width="10" height="10"></object>
+    </div>
+
+    <!-- Button -->
+    <div>
+        <button id="btnTest">点我测试</button>
+    </div>
+
+    <script type="text/javascript">
+        var plugin = document.getElementById('plugin');
+        var btnTest = document.getElementById('btnTest');
+
+        //测试插件
+        btnTest.onmouseup = function (event) {
+            plugin.testPlugin();
+        }     
+
+    </script>
+</body>
+</html>
