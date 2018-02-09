@@ -2,7 +2,7 @@
 
 ---
 ## 链接
-[Vue官网](https://cn.vuejs.org/)
+[Vue官网https://cn.vuejs.org/](https://cn.vuejs.org/)
 
 ## 1.vue
 ### 1.1 结构

@@ -5,6 +5,11 @@
 [gSoap官网](http://www.cs.fsu.edu/~engelen/soap.html)
 
 ### 环境搭建
+![](img/pre_install.png)
+
+- automake
+[手动安装m4, autoconf, automake, libtool](http://blog.csdn.net/qq_30549833/article/details/72955881)
+
 - zlib
 http://www.zlib.net/zlib-1.2.11.tar.gz
 
