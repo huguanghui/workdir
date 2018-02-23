@@ -21,3 +21,7 @@
 ## 4.问题
 ### 为什么通过object引入插件
 	<object> 标签用于包含对象，比如图像、音频、视频、Java applets、ActiveX、PDF 以及 Flash,然后通过<param>标签向object传递参数.
+
+
+## 仓库地址
+	http://192.168.0.202/gitlab/vue.git
