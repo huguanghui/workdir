@@ -3,6 +3,7 @@
 ---
 ### 链接
 [gSoap官网](http://www.cs.fsu.edu/~engelen/soap.html)
+[onvif协议profile简介](http://www.qianjia.com/html/2017-07/27_273587.html)
 
 ### 环境搭建
 ![](img/pre_install.png)
