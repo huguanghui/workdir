@@ -22,6 +22,13 @@ p      { color: red; }
 4.伪类
 
 ## 定位元素
+### 盒模型
+- 边框(border)
+- 内边距(padding)
+- 外边距(margin)
+
+### position和display属性
+### float和clear元素
 
 ## 字体
 
