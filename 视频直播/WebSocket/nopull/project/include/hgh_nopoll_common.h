@@ -1,8 +1,7 @@
-#ifnode __HGH_NOPOLL_COMMON_H__
+#ifndef __HGH_NOPOLL_COMMON_H__
 #define __HGH_NOPOLL_COMMON_H__
 
 #include <nopoll.h>
-
 #include <pthread.h>
 
 noPollPtr __nopoll_regtest_mutex_create(void);
