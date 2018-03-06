@@ -1,0 +1,46 @@
+digraph G {
+	rankdir=TB;
+	
+	fontname="Microsoft YaHei";
+	fontsize=12;
+	
+	label="SFR_drawSmartData的处理流程";
+
+	node[shape=Mrecord, fontname="Microsoft YaHei", fontsize=12, color="skyblue"];
+	edge[fontname="Microsoft YaHei", fontsize=12, color=darkgreen];
+
+	start[label="", shape=circle, width=0.3, fixedsize=true, style=filled, color=black];
+	end[label="", shape=circle, width=0.3, fixedsize=true, style=filled, color=black];
+	
+	s1[label=" 检验解码器标识_free_port的合法性"];
+	s2[label=" 向播放器配置参数"];
+	s3[label=" 设置画刷的线的宽度"];
+	s4[label=" 设置视频分辨率和窗口分辨率"];
+	s5[label=" 检测m_smart_i_data_update"];
+	s6[label=" set_smart_rule()"];
+	s7[label=" 解析智能帧"];
+	s8[label=" 地平线的处理方式"];
+	s9[label=" 恩智的处理方式"];
+	s10[label=" 刷新规则帧和结果帧的显示"];
+
+	d1[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
+	d2[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
+	d3[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
+
+	start->s1;
+	s1->d1;
+	d1->s2[label="_free_port>0"];
+	d1->end;
+	s2->s3;
+	s3->s4;
+	s4->s5;
+	s5->d2;
+	d2->s6[label="true"];
+	d2->s7[label="false"];
+	s6->s7;
+	s7->d3;
+	d3->s8[label="dwVersion == 100"];
+	d3->s9[label="dwVersion != 100"];
+	{s8,s9}->s10;
+	s10->end;
+}	

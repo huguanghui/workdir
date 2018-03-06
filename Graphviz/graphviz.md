@@ -31,3 +31,29 @@ graphviz的设计初衷是对有向图和无向图等进行自动布局,开发�
     定义一个图,并向图中添加需要的顶点和边
     为顶点和边添加样式
     使用布局引擎进行绘制
+
+## UML类图模板
+
+```
+digraph UML_G {
+  fontname = "Courier New"
+  fontsize = 10
+  
+  node [ fontname = "Courier New", fontsize = 10, shape = "record" ];
+  edge [ fontname = "Courier New", fontsize = 10 ];
+  
+  Animal [ label = "{Animal |+ name : String\l+ age : int\l|+ die() : void\l}" ];
+  
+  subgraph clusterAnimalImpl{
+      bgcolor="yellow"
+      Dog [ label = "{Dog||+ bark() : void\l}" ];
+      Cat [ label = "{Cat||+ meow() : void\l}" ];
+  };
+  
+  edge [ arrowhead = "empty" ];
+  
+  Dog->Animal;
+  Cat->Animal;
+  Dog->Cat [arrowhead="none", label="0..*"];
+}
+```
