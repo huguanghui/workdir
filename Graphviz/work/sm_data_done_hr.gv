@@ -15,20 +15,15 @@ digraph G {
 	s1[label=" 获取实时流的时间戳(ms)"];
 	s2[label=" 检测智能结果帧enable_result"];
 	s3[label=" 检测智能帧缓冲区的数据m_smart_data_vector"];
-	s4[label=" 获取检测智能结果帧"];
-	s5[label=" font和back的比较"];
+	s4[label=" 智能帧缓冲中的个数"];
+	s5[label=" 视频帧时间和智能帧时间比较"];
 	s6[label=" 视频帧时间和智能帧时间比较"];
-	s7[label=" 视频帧时间和智能帧时间比较"];
-	s8[label=" "];
-	s9[label=" face_result:pic_data_len"];
-	s10[label=" 保存人脸图片"];
-	s11[label=" 设置智能结果的数据格式,将数据保存到智能结果的缓冲区中"];
+	s7[label=" 删除掉视频帧时间戳之前的智能帧"];
+	s8[label=" 删除掉所有的智能帧"];
 
 	d1[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
 	d2[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
 	d3[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
-	d4[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
-	d5[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
 
 	start->s1;
 	s1->s2;
@@ -36,20 +31,14 @@ digraph G {
 	d1->s3[label="true"];
 	d1->end;
 	s3->d2;
-	d2->end[label="null"];
-	d2->s4;
-	s4->s5;
-	s5->d3;
-	d3->s4[label="智能帧超前视频帧时间"];
-	d3->s6;
-	s6->d4;
-	d4->s7[label="true"];
-	s7->s4;
-	d4->s8;
-	s8->s9;
-	s9->d5;
-	d5->s10[label=">0"];
-	d5->s11[label="=0"];
-	s10->end;
-	s11->end;
+	d2->s5[label="size==1"];
+	s5->end[label="视频帧和智能帧时间一致"];
+	d2->s4[label="size>1"];
+	s4->s6;
+	s6->d3;
+	d3->end[label="video<smart_start"];
+	d3->s7[label="smart_start<video<smart_stop"];
+	d3->s8[label="video>smart_stop"];
+	s7->end;
+	s8->end;
 }	
