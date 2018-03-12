@@ -78,3 +78,9 @@
 
 - function构造类时this的指向
 	指向实例化的对象
+
+## WebAPI-Navigator接口
+Navigator接口表示用户代理的状态和标识.它允许脚本查询它和注册自己进行一些活动.
+
+### userAgent
+返回当前浏览器的用户代理字符串.
