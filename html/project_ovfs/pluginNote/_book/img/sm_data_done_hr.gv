@@ -1,0 +1,44 @@
+digraph G {
+	rankdir=TB;
+	
+	fontname="Microsoft YaHei";
+	fontsize=12;
+	
+	label="SFR_drawSmartData的处理流程";
+
+	node[shape=Mrecord, fontname="Microsoft YaHei", fontsize=12, color="skyblue"];
+	edge[fontname="Microsoft YaHei", fontsize=12, color=darkgreen];
+
+	start[label="", shape=circle, width=0.3, fixedsize=true, style=filled, color=black];
+	end[label="", shape=circle, width=0.3, fixedsize=true, style=filled, color=black];
+	
+	s1[label=" 获取实时流的时间戳(ms)"];
+	s2[label=" 检测智能结果帧enable_result"];
+	s3[label=" 检测智能帧缓冲区的数据m_smart_data_vector"];
+	s4[label=" 智能帧缓冲中的个数"];
+	s5[label=" 视频帧时间和智能帧时间比较"];
+	s6[label=" 视频帧时间和智能帧时间比较"];
+	s7[label=" 删除掉视频帧时间戳之前的智能帧"];
+	s8[label=" 删除掉所有的智能帧"];
+
+	d1[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
+	d2[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
+	d3[label="", shape=diamond, width=0.4, height=0.3, fixedsize=true, penwidth=1.5];
+
+	start->s1;
+	s1->s2;
+	s2->d1
+	d1->s3[label="true"];
+	d1->end;
+	s3->d2;
+	d2->s5[label="size==1"];
+	s5->end[label="视频帧和智能帧时间一致"];
+	d2->s4[label="size>1"];
+	s4->s6;
+	s6->d3;
+	d3->end[label="video<smart_start"];
+	d3->s7[label="smart_start<video<smart_stop"];
+	d3->s8[label="video>smart_stop"];
+	s7->end;
+	s8->end;
+}	

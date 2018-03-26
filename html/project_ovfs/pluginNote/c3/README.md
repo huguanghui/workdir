@@ -7,3 +7,8 @@
 ```cpp
 <CVPlugin identity="preview" type="PREVIEW"></CVPlugin>
 ```
+
+## 注意细节
+<p style="color:red">
+    1. 网页中对设备和通道都是从序号为1开始算的<br>
+</p>

@@ -1,0 +1,483 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.2 流程分析 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="s1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../c1/">
+            
+                <a href="../c1/">
+            
+                    
+                    第1章 插件——人脸检测
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../c1/s1.html">
+            
+                <a href="../c1/s1.html">
+            
+                    
+                    1.1 结构分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../c1/s2.html">
+            
+                <a href="../c1/s2.html">
+            
+                    
+                    1.2 流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../c2/">
+            
+                <a href="../c2/">
+            
+                    
+                    第2章 插件-本地预览模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../c2/s1.html">
+            
+                <a href="../c2/s1.html">
+            
+                    
+                    2.1 结构分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../c2/s2.html">
+            
+                <a href="../c2/s2.html">
+            
+                    
+                    2.2 流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第3章 插件-预览播放
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="s1.html">
+            
+                <a href="s1.html">
+            
+                    
+                    3.1 结构分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="s2.html">
+            
+                <a href="s2.html">
+            
+                    
+                    3.2 流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.2 流程分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="32-&#x6D41;&#x7A0B;&#x5206;&#x6790;">3.2 &#x6D41;&#x7A0B;&#x5206;&#x6790;</h1>
+<h2 id="321-vue&#x4E2D;&#x9884;&#x89C8;&#x63D2;&#x4EF6;&#x8C03;&#x7528;">3.2.1 Vue&#x4E2D;&#x9884;&#x89C8;&#x63D2;&#x4EF6;&#x8C03;&#x7528;</h2>
+<p><img src="../img/preview_load_2.png" alt=""></p>
+<pre><code class="lang-cpp">  switch_stream({commit,state,getters,dispatch},{val}) {//&#x9884;&#x89C8;&#x5207;&#x6362;&#x7801;&#x6D41;
+
+     let Activex;
+      if (!getters.preview_right) return;
+      if (Activex = getters.preview_plugin) {
+
+        if (getters.plugin_type == &apos;flash&apos;) {
+
+           msg([getters.ip,getters.rtmp_port])
+            let rtmp_url = [&apos;rtmp://&apos;, getters.ip, &apos;:&apos;, getters.rtmp_port, &apos;/live&apos;].join(&apos;&apos;);
+             if(getters.factory_info.IsOfFishEye == &apos;y&apos;){
+
+                 let chList = rangeArray(1,getters.ChanNum);
+                 chList = chList.map(item=&gt;{
+                    return {
+                      ch:item,
+                      stream_type:0
+                    }
+                 })
+                Activex.OpenDeviceAll(rtmp_url,JSON.stringify(chList));
+             }
+             else{
+                if (val == &quot;0&quot;) {
+
+                 // Activex.StopStream(1, rtmp_url, &apos;ch01_sub.264&apos;);
+
+                  Activex.PlayStream(1, rtmp_url, &apos;ch01.264&apos;);
+                }
+                else if (val == &quot;1&quot;) {
+
+                  //Activex.StopStream(0, rtmp_url, &apos;ch01.264&apos;);
+
+                  Activex.PlayStream(1, rtmp_url, &apos;ch01_sub.264&apos;);
+                }else if(val == &quot;3&quot;){//&#x4E09;&#x7801;&#x6D41;
+                  Activex.PlayStream(1, rtmp_url, &apos;ch01_third.264&apos;);
+                }
+                //Activex.PlaySmart(is_play_rule,is_play_result);
+             }
+
+        } 
+        else {
+
+            dispatch(&apos;preview_plugin_callbackmsg&apos;,{});
+            if (getters.preview.init_mode == &apos;fisheye&apos;) {
+              let chList = rangeArray(1,getters.ChanNum);
+              Activex.OpenAllStream({
+                &quot;streamType&quot;: val,
+                &quot;transProto&quot;: 1,
+                &quot;chList&quot;: chList,
+                &quot;ip&quot;: getters.ip,
+                &quot;port&quot;: getters.rtsp_port,
+                &quot;usrname&quot;: getters.tokenA,
+                &quot;pwd&quot;: getters.tokenB,
+              });
+            }
+            else if (getters.preview.init_mode == &apos;normal&apos;) {
+              Activex.StopStream({&quot;ch&quot;: 1});
+              msg([&quot;playstream&quot;,getters.ip,getters.rtsp_port,getters.tokenA,getters.tokenB,val])
+              Activex.PlayStream({
+                &quot;streamType&quot;: val,
+                &quot;transProto&quot;: 1,
+                &quot;ch&quot;: 1,
+                &quot;ip&quot;: getters.ip,
+                &quot;port&quot;: getters.rtsp_port,
+                &quot;usrname&quot;: getters.tokenA,
+                &quot;pwd&quot;: getters.tokenB
+              });
+            }
+
+          var color = Activex.GetColor({ch:1});
+          //&#x5F00;&#x6D41;&#x4E4B;&#x540E;
+          setTimeout(_=&gt;{
+            commit(&apos;preview/plugin_color_changed&apos;,color)
+          },250);
+
+          Activex.EnableSmartDisplay({&quot;type&quot;:0,&quot;param&quot;:0x1});
+          Activex.EnableSmartDisplay({&quot;type&quot;:0,&quot;param&quot;:0x2});
+        }
+      }
+  },
+</code></pre>
+<p><img src="../img/preview_load_1.png" alt=""></p>
+<h2 id="322-&#x63D2;&#x4EF6;&#x4E2D;&#x7684;api">3.2.2 &#x63D2;&#x4EF6;&#x4E2D;&#x7684;API</h2>
+<p>// &#x6D41;&#x7684;&#x5173;&#x95ED;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">long</span> NPAntsTestAPI::CloseStream(FB::JSObjectPtr obj,FB::CatchAll&amp; args);
+{
+  ...
+  <span class="hljs-comment">//@auto-param dev ch</span>
+  prev-&gt;CloseStream(ch,dev);
+  ...
+}
+</code></pre>
+<p>// &#x6D41;&#x7684;&#x64AD;&#x653E;</p>
+<pre><code class="lang-cpp">
+
+</code></pre>
+<p>// &#x7A97;&#x53E3;&#x7684;&#x5212;&#x5206;</p>
+<pre><code class="lang-cpp">registerMethod(<span class="hljs-string">&quot;WndSequence&quot;</span>,
+    make_method(<span class="hljs-keyword">this</span>, &amp;NPAntsTestAPI::WndSequence));
+
+<span class="hljs-keyword">long</span> NPAntsTestAPI::WndSequence(FB::JSObjectPtr obj)
+{
+...
+    prev-&gt;WndSequence(splitNum, seqIndex, <span class="hljs-number">1</span>);
+...
+}
+
+<span class="hljs-comment">// &#x56FA;&#x5B9A;&#x7A97;&#x53E3;</span>
+<span class="hljs-comment">//@curSplitNum</span>
+<span class="hljs-comment">//@seqIndex</span>
+<span class="hljs-comment">//@mode</span>
+<span class="hljs-keyword">long</span> PreviewObject::WndSequence(<span class="hljs-keyword">long</span> curSplitNum,<span class="hljs-keyword">long</span> seqIndex,<span class="hljs-keyword">long</span> mode)
+{
+
+}
+
+<span class="hljs-comment">//</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="s1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 3.1 结构分析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.2 流程分析","level":"1.4.2","depth":2,"previous":{"title":"3.1 结构分析","level":"1.4.1","depth":2,"path":"c3/s1.md","ref":"c3/s1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"c3/s2.md","mtime":"2018-03-12T07:44:44.451Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-19T02:28:22.586Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

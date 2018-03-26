@@ -1,0 +1,17 @@
+digraph UML_G {
+  fontname = "Microsoft YaHei"
+  fontsize = 10
+  
+  label = "智能回调结构"
+
+  node [ fontname = "Microsoft YaHei", fontsize = 10, shape = "record" ];
+  edge [ fontname = "Microsoft YaHei", fontsize = 10 ];
+  
+  PreviewObject [ label = "{PreviewObject ||+ playerVec : BOOST_PlayerArray||<render>+ srender : SmartRender}" ];
+
+  SmartRender [ label = "{SmartRender ||+ SFR_drawSmartData(...)||}" ];
+  
+  edge [ arrowhead = "empty" ];
+	
+  PreviewObject:render->SmartRender;
+}
