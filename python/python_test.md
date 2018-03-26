@@ -8,3 +8,15 @@
 
 ## flask的web框架的使用
 [web微框架](http://docs.jinkan.org/docs/flask/)
+
+## 常用使用
+[pip使用][1]
+[程序员之路：python3+PyQt5+pycharm桌面GUI开发][2]
+[PyQt5教程][3]
+
+## 注意事项
+1.安装PyQt5时注意python文件夹的用户权限.
+
+[1]:http://blog.csdn.net/u012450329/article/details/52537651
+[2]:http://blog.sina.com.cn/s/blog_989218ad0102wz1k.html
+[3]:http://code.py40.com/pyqt5/
