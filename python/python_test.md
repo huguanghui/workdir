@@ -14,6 +14,28 @@
 [程序员之路：python3+PyQt5+pycharm桌面GUI开发][2]
 [PyQt5教程][3]
 
+## python知识点
+
+- python同时支持程序和面向对象编程
+- 面向对象的三个重要方面:类,变量和方法.
+- pyqt5模块划分:
+	- QtCore
+	- QtGui
+	- QtWidgets 创建经典桌面风格的用户界面的UI元素
+	- QtMultimedia
+	- QtBluetooth
+	- QtNetwork
+	- QtPositioning
+	- Enginio
+	- QtWebSockets
+	- QtWebKit
+	- QtWebKitWidgets
+	- QtXml
+	- QtSvg
+	- QtSql
+	- QtTest
+
+
 ## 注意事项
 1.安装PyQt5时注意python文件夹的用户权限.
 
