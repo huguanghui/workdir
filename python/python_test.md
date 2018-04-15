@@ -35,6 +35,28 @@
 	- QtSql
 	- QtTest
 
+pyUIC转换后的使用
+
+```python
+if __name__ == "__main__":
+	import sys
+
+    app = QtWidgets.QApplication(sys.argv)
+
+    widget = QtWidgets.QWidget()
+
+    ui = Ui_Form()
+    ui.setupUi(widget)
+
+    widget.show()
+
+    sys.exit(app.exec_())
+```
+
+## [python打包成exe可执行程序][4]
+pyinstaller -F myfile.py
+
+
 
 ## 注意事项
 1.安装PyQt5时注意python文件夹的用户权限.
@@ -42,3 +64,4 @@
 [1]:http://blog.csdn.net/u012450329/article/details/52537651
 [2]:http://blog.sina.com.cn/s/blog_989218ad0102wz1k.html
 [3]:http://code.py40.com/pyqt5/
+[4]:http://www.51testing.com/html/25/70225-3715960.html

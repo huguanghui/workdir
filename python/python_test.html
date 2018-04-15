@@ -1018,6 +1018,8 @@ body .markdown-body
 <ul>
 <li><a href="#flaskweb">flask的web框架的使用</a></li>
 <li><a href="#_1">常用使用</a></li>
+<li><a href="#python">python知识点</a></li>
+<li><a href="#pythonexe">python打包成exe可执行程序</a></li>
 <li><a href="#_2">注意事项</a></li>
 </ul>
 </div>
@@ -1032,5 +1034,46 @@ body .markdown-body
 <p><a href="http://blog.csdn.net/u012450329/article/details/52537651">pip使用</a><br />
 <a href="http://blog.sina.com.cn/s/blog_989218ad0102wz1k.html">程序员之路：python3+PyQt5+pycharm桌面GUI开发</a><br />
 <a href="http://code.py40.com/pyqt5/">PyQt5教程</a></p>
+<h2 id="python"><a name="user-content-python" href="#python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>python知识点</h2>
+<ul>
+<li>python同时支持程序和面向对象编程</li>
+<li>面向对象的三个重要方面:类,变量和方法.</li>
+<li>pyqt5模块划分:<ul>
+<li>QtCore</li>
+<li>QtGui</li>
+<li>QtWidgets 创建经典桌面风格的用户界面的UI元素</li>
+<li>QtMultimedia</li>
+<li>QtBluetooth</li>
+<li>QtNetwork</li>
+<li>QtPositioning</li>
+<li>Enginio</li>
+<li>QtWebSockets</li>
+<li>QtWebKit</li>
+<li>QtWebKitWidgets</li>
+<li>QtXml</li>
+<li>QtSvg</li>
+<li>QtSql</li>
+<li>QtTest</li>
+</ul>
+</li>
+</ul>
+<p>pyUIC转换后的使用</p>
+<pre><code class="python">if __name__ == &quot;__main__&quot;:
+    import sys
+
+    app = QtWidgets.QApplication(sys.argv)
+
+    widget = QtWidgets.QWidget()
+
+    ui = Ui_Form()
+    ui.setupUi(widget)
+
+    widget.show()
+
+    sys.exit(app.exec_())
+</code></pre>
+
+<h2 id="pythonexe"><a href="http://www.51testing.com/html/25/70225-3715960.html">python打包成exe可执行程序</a></h2>
+<p>pyinstaller -F myfile.py</p>
 <h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>注意事项</h2>
 <p>1.安装PyQt5时注意python文件夹的用户权限.</p></article></body></html>

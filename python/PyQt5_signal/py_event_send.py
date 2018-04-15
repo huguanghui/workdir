@@ -37,6 +37,7 @@ class Example(QMainWindow):
 		sender = self.sender()
 		self.statusBar().showMessage(sender.text() + ' was pressed')
 
+
 if __name__ == '__main__':
 
 	app = QApplication(sys.argv)

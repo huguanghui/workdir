@@ -7,3 +7,13 @@
 [Hexo官方插件页](https://hexo.io/plugins/)
 [Hexo搭建系列博客](https://www.jianshu.com/p/739bf1305e66)
 [博客搭建成长史](http://moxfive.xyz/2015/08/20/blog-building/)
+
+## hexo中themes中的layout布局分析
+[swig用法][1]
+[swig翻译][2]
+
+## 
+
+
+[1]:http://node-swig.github.io/swig-templates/docs/
+[2]:https://blog.csdn.net/duola8789/article/details/70157900
