@@ -1,0 +1,105 @@
+/*
+    main.me -- Main MakeMe file for Expansive
+ */
+
+Me.load({
+    plugins: [ 'installs' ],
+
+    blend: [
+        'src/*/*.me',
+    ],
+
+    configure: {
+        requires:  [ 'osdep', 'ejscript', 'mpr', 'http', 'pcre', 'zlib' ],
+        discovers: [ 'ssl' ],
+        extras:    [ 'sqlite' ]
+    },
+
+    customize: [
+        /*
+            The optional custom.me file is loaded after main.me is fully processed. It can
+            thus override any setting. Feel free to create and customize.
+         */
+        'custom.me',
+    ],
+
+    settings: {
+        platforms: [ 'local' ],
+        tune: 'size',
+        integrate: true,
+
+        ejscript: {
+            compile: '--debug',
+            db: true,
+            mail: true,
+            mapper: true,
+            shell: false,
+            tar: true,
+            template: true,
+            web: true,
+            zlib: true,
+        },
+
+        http: {
+            cmd: false,
+            /* Use PAM (Plugable Authentication Module) to store passwords */
+            pam: false,
+        },
+
+        mbedtls: {
+            compact: true,      /* Compact edition - Disable non-essential ciphers and features */
+        },
+
+        mpr: {
+            /*
+                Enable logging via mprLog to the log file. Error messages are always enabled.
+                The default is to enable logging for both debug and release builds.
+             */
+            logging: true,
+        },
+
+        tune: 'speed',
+
+        prefixes: 'install-prefixes',
+        manifest: 'installs/manifest.me',
+    },
+
+    targets: {
+        'expansive.mod': {
+            path: '${BIN}/expansive.mod',
+            files: [ 'src/expansive.es', 'src/ExpParser.es', 'paks/ejs.version/Version.es' ],
+            build: `
+                run('"${LBIN}/expansive-ejsc" ${settings.ejscript.compile} --out "${BIN}/expansive.mod" --optimize 9 ${FILES}')
+            `,
+            message: 'Compile: expansive.mod',
+            depends: [ 'ejs.mod' ],
+        },
+        'expansive': {
+            type: 'exe',
+            path: '${BIN}/expansive${EXE}',
+            sources: [ 'src/*.c' ],
+            depends: [ 'libmpr', 'libhttp', 'libejs', 'expansive.mod' ],
+        },
+
+        sample: {
+            path: [ '${BIN}/sample.json' ],
+            files: [ 'src/sample.json' ],
+            type: 'file',
+        }
+
+        projects: {
+            action: `genProjects('', 'default', ['freebsd-x86', 'linux-x86', 'macosx-x64', 'windows-x86'])`,
+        },
+
+
+        publish: {
+            action: `publish()`,
+        },
+
+        mine: {
+            action: `genProjects('', 'mine', Config.OS + '-' + Config.CPU)`,
+        },
+    },
+})
+
+

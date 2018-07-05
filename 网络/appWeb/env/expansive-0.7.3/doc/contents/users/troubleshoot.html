@@ -1,0 +1,48 @@
+{
+    title:  'Expansive Troubleshooting',
+    crumbs: [ 
+        { "User's Guide": "index.html" },
+    ],
+}
+   
+        <h1>Troubleshooting</h1>
+        <p>Expansive has some debugging features to help you determine why the program may not be rendering your
+        site the way you expect.</p>
+
+        <h2>Verbose Mode</h2>
+        <p>Expansive verbose mode provide detailed trace as it loads configuration, plugins and renders the site.
+        This can help pin-point what Expansive thinks it is doing.</p>
+
+        <pre class="code">$ expansive -v
+   [Loading] expansive.json
+      [Info] Using mode: debug
+    [Plugin] exp-internal provides "exp" for exp -&gt; *
+      [Load] Plugin paks/animate.css
+      [Load] Plugin paks/exp-analytics
+    [Plugin] exp-analytics provides "analytics" for html -&gt; html
+      [Load] Plugin paks/exp-css
+        ....
+ [Transform] layouts/default.html.exp (exp -&gt; *)
+   [Service] exp from "exp-internal"
+ [Transform] partials/head.html.exp (exp -&gt; *)
+   [Service] exp from "exp-internal"
+ [Transform] partials/head.html.exp (html -&gt; html)
+   [Service] analytics from "exp-analytics"
+        ....
+</pre>
+        
+        <p>Conversely to verbose mode, there is a quite mode.</p>
+        <pre class="code">$ expansive -q</pre>
+
+        <h2>Debug Mode</h2>
+        <p>Debug mode will dump some internal Expansive data structures on startup and will also display
+        symbolic stack backtraces for internal and other scripting errors. These data structures include:</p>
+        <ul>
+            <li>Meta &mdash; Top level meta data properties</li>
+            <li>Control &mdash; Aggregated Expansive control properties</li>
+            <li>Transforms &mdash; File type transformation rules</li>
+            <li>Services &mdash; The configured services and service configuration</li>
+            <li>Collections &mdash; The configured collection lists</li>
+            <li>Mappings &mdash; The transformation pipeline mappings</li>
+        </ul>
+        <pre class="code">$ expansive -d</pre>

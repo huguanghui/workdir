@@ -1,0 +1,12 @@
+{
+    "name": "expansive-doc",
+    "title": "Embedthis Expansive Documentation",
+    "dependencies": {
+        "me-docstyle": "~0.9"
+    },
+    "directories": {
+        "export": "contents/lib"
+    },
+    "import": true,
+    "profile": "debug"
+}

@@ -1,0 +1,48 @@
+{
+    "name": "expansive",
+    "description": "Embedthis Expansive",
+    "version": "0.7.3",
+    "keywords": [
+        "expansive"
+    ],
+    "homepage": "https://embedthis.com/expansive/",
+    "author": {
+        "name": "Embedthis Software",
+        "email": "dev@embedthis.com",
+        "url": "http://embedthis.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/embedthis/expansive.git"
+    },
+    "bugs": {
+        "email": "dev@embedthis.com",
+        "url": "http://github.com/embedthis/expansive/issues"
+    },
+    "licenses": [
+        {
+            "type": "GPL",
+            "url": "http://www.gnu.org/licenses/gpl-2.0.html"
+        },
+        {
+            "type": "Commercial",
+            "url": "http://embedthis.com/licensing/"
+        }
+    ],
+    "dependencies": {
+        "certs": "~0.1",
+        "ejs.version": "~0.8",
+        "ejscript": "~2.7",
+        "mpr": "~7",
+        "mpr-mbedtls": "~2",
+        "ssl": "~0.9"
+    },
+    "optionalDependencies": {
+        "mpr-openssl": "~0.5"
+    },
+    "devDependencies": {
+        "makeme": ">=0.9.0",
+        "pak": ">=0.11.0"
+    },
+    "import": true
+}

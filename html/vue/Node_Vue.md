@@ -6,6 +6,7 @@
 [Vue的API](https://cn.vuejs.org/v2/api/)
 [Vue的编程风格](https://cn.vuejs.org/v2/style-guide/#%E7%BB%84%E4%BB%B6-%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%89%E9%A1%B9%E7%9A%84%E9%A1%BA%E5%BA%8F-%E6%8E%A8%E8%8D%90)
 [Vue样例](https://cn.vuejs.org/v2/examples/index.html)
+[vue调试](https://jingyan.baidu.com/article/3a2f7c2e246a1826aed61142.html)
 
 ## 专业术语
 
@@ -514,3 +515,4 @@
   Store是一个仓库.state就是数据源存放地.对应于一般Vue对象里面的data(后面的actions和mutations对应于methods)
   创建Store实例new Vuex.store({state,getters,mutations,actions}),有很多子模块的时候会用到modules
 ![](./img/s_3.png)
+

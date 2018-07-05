@@ -31,3 +31,5 @@ Ryan Dahl是一个比较随性的软件工程师,有自己的追求和理想.
 ### 3.核心的框架
 ### 4.执行流程
 ### 5.定制添加自己的代码
+
+## [nodejs的调试方法](https://blog.csdn.net/yiifaa/article/details/77676393)

@@ -1,0 +1,84 @@
+{
+    title:  'Plugins',
+    crumbs: [ 
+        { "User's Guide": "index.html" },
+    ],
+}
+   
+        <h1>Plugins</h1>
+ 
+        <p>Plugins are packages that provides core processing for the Expansive processing pipeline. 
+        Plugins provide <em>services</em> that are used to transform content from one file type to 
+        another. For example: the <em>exp-markdown</em> plugin provides the <em>Markdown</em> 
+        service that transforms <em>.md</em> files into standard <em>.html</em> files.</p>
+
+        <h2>Installing Plugins</h2>
+        <p>Plugins are delivered as <a href="http://embedthis.com/pak">Pak</a> packages. Most skeletons will
+        install the required plugins by specifying them as skeleton package dependencies. This means you often
+        do not need to explicitly install plugins when installing skeletons.</p>
+
+        <p>To install a plugin, simply use <em>pak install</em>. For example:</p>
+        <code class="inverted">pak install exp-babel</code>
+        <p>This will install the <a href="http://babelejs.io">Babel</a> transpiler to compile Javascript ES6 into
+        Javascript ES5. If the plugin relies on other packages as dependencies, those dependent packages will also
+        be installed.</p>
+
+        <p>Expansive understands the list of package dependencies in the package.json and will automatically
+        add plugins loaded as packages to its transformation processing pipeline. Other than installing the plugin,
+        no further configuration is required to enable the plugin.</p>
+
+        <h2>Popular Plugins</h2>
+        <table class="ui table" title="plugins">
+            <thead>
+                <tr><th>Package Name</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-angular">exp-angular</a></td>
+                    <td>Manage building Angular applications.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-babel">exp-babel</a></td>
+                    <td>Convert client-side ES6 Javascript to ES5 for current browsers.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-css">exp-css</a></td>
+                    <td>Process CSS files to add browser specific prefixes and
+                        minify the output.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-esp">exp-esp</a></td>
+                    <td>Compile ESP pages, controllers and applications.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-gzip">exp-gzip</a></td>
+                    <td>Compress final content using gzip.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-js">exp-js</a></td>
+                    <td>Process Javascript files to minify.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-less">exp-less</a></td>
+                    <td>Process Less stylesheets into CSS.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-markdown">exp-markdown</a></td>
+                    <td>Process markdown pages into HTML.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-reload">exp-reload</a></td>
+                    <td>Live reload in the browser for Expansive when content is updated.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-sass">exp-sass</a></td>
+                    <td>Process SASS files into css.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/embedthis/exp-shell">exp-shell</a></td>
+                    <td>Run shell scripts and capture the output.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        

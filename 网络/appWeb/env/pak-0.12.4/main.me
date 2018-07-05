@@ -1,0 +1,106 @@
+/*
+    main.me -- Main MakeMe file for Pak
+ */
+
+Me.load({
+    makeme: '>=0.9.0',
+
+    plugins: [ 'installs' ],
+
+    blend: [
+        'src/*/*.me',
+        'doc/doc.me',
+    ],
+
+    configure: {
+        requires:  [ 'osdep', 'ejscript', 'http', 'mpr', 'pcre', 'zlib' ],
+        discovers: [ 'ssl' ],
+        extras:    [ 'sqlite' ],
+    },
+
+    customize: [
+        /* 
+            The optional custom.me file is loaded after main.me is fully processed. It can
+            thus override any setting. Feel free to create and customize. 
+         */
+        'custom.me',
+    ],
+
+    settings: {
+        integrate: true,
+
+        /*
+            Installation prefix set
+         */
+        prefixes: 'install-prefixes',
+        manifest: 'installs/manifest.me',
+
+        platforms: [ 'local' ],
+        tune: 'size',
+
+        ejscript: {
+            compile: '--debug',
+            db: false,
+            mail: false,
+            mapper: false,
+            shell: false,
+            tar: true,                                                                                     
+            template: false,
+            web: false,
+            zlib: true,
+        }, 
+
+        http: {
+            /* Use PAM (Plugable Authentication Module) to store passwords */
+            pam: false,
+        },
+                                                                                                           
+        mbedtls: {
+            compact: true,      /* Compact edition - Disable non-essential ciphers and features */
+        },
+
+        mpr: {                                                                                             
+            /*                                                                                             
+                Enable logging via mprLog to the log file. Error messages are always enabled.              
+                The default is to enable logging for both debug and release builds.                        
+             */                                                                                            
+            logging: true,                                                                                 
+        },
+
+        tune: 'speed',
+    },
+
+    targets: {
+        'pak.mod': {
+            path: '${BIN}/pak.mod',
+            files: [ 'src/Package.es', 'src/pak.es', 'paks/ejs.version/Version.es' ],
+            build: `
+                trace('Compile', 'src/*.es')
+                run('"${BIN}/pak-ejsc" ${settings.ejscript.compile} --out "${BIN}/pak.mod" --optimize 9 ${FILES}')
+            `,
+            depends: [ 'ejs.mod' ],
+        },
+
+        'pak': {
+            type: 'exe',
+            path: '${BIN}/pak${EXE}',
+            sources: [ 'src/pak.c' ],
+            depends: [ 'libejs', 'pak.mod' ],
+        },
+
+        projects: {
+            action: `
+                genProjects('', 'default', ['freebsd-x86', 'linux-x86', 'macosx-x64', 'windows-x86'])
+            `,
+        },
+
+        publish: {
+            action: `publish()`,
+        },
+
+        mine: {
+            action: `genProjects('', 'mine', Config.OS + '-' + Config.CPU)`,
+        }
+    }
+})
+

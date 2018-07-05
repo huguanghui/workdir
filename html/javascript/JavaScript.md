@@ -2,6 +2,7 @@
 
 ---
 ## 链接
+[ES6标准](http://www.ecma-international.org/ecma-262/6.0/)
 [理解JavaScript中的闭包](https://www.cnblogs.com/cboyce/p/6003269.html)
 [JS中window](http://www.w3school.com.cn/js/js_window.asp)
 [CryptoJS加密库的使用](http://blog.csdn.net/wangcunhuazi/article/details/41491995)
@@ -21,6 +22,7 @@
 
 ## window
 	表示浏览器窗口
+	
 ### 对象
 	全局对象,函数以及变量均自动成为window对象成员
 	全局变量是window对象的属性(window.document.getElementById("header"))
@@ -84,3 +86,5 @@ Navigator接口表示用户代理的状态和标识.它允许脚本查询它和�
 
 ### userAgent
 返回当前浏览器的用户代理字符串.
+
+### 
