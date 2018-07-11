@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#   configure -- Configure for building
+#
+if ! type me >/dev/null 2>&1 ; then
+    echo -e "\nInstall the \"me\" tool for configuring." >&2
+    echo -e "Download from: https://embedthis.com/downloads/me/download.ejs." >&2
+    echo -e "Or skip configuring and make a standard build using \"make\".\n" >&2
+    exit 255
+fi
+me configure "$@"

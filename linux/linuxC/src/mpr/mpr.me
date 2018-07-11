@@ -1,0 +1,21 @@
+/*
+    mpr.me test embedthis mpr 
+*/
+
+Me.load({
+    targets: {
+        mpr: {
+            path: '${BIN}/mpr${EXE}',
+            type: 'exe',
+            sources: [ 'mpr_main.c' ],
+            depends: [],
+        },
+
+        libmpr: {
+            type: 'lib',
+            depends: [ 'osdep' ],
+            sources: [ 'mpr_api.c' ],
+            headers: [ '*.h' ],
+        }
+    }
+})

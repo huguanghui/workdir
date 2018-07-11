@@ -1,0 +1,16 @@
+/*
+    test.me -- MakeMe file for test
+ */
+
+Me.load({
+    blend: [ ],
+
+    targets: {
+        sscanf01: {
+            path:    '${BIN}/sscanf01${EXE}',
+            type:    'exe',
+            sources: [ 'main.c' ],
+            depends: [ ],
+        }
+	}
+})
