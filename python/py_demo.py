@@ -6,7 +6,6 @@ data: 2018/3/27
 """
 
 import sys
-
 class Example(QWidget):
 	def __init__(self):
 		super().__init__()

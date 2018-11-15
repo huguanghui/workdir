@@ -10,3 +10,7 @@
     -S 
     eg: readelf -S libmpr.so
     观察是不是带有debug字段
+
+---
+## ubuntu系统的bug解决
+- [/dev/sda1报错无法启动](https://blog.csdn.net/zhang_danf/article/details/23821819)
