@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class_Id</title>
+    <style>
+        body {
+            padding: 0;
+            background: #042d48;
+        }
+        #loading{
+            position: fixed; /*定位设为固定定位*/
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            overflow: hidden;
+        }
+        #loading .center {
+            width: 80px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -4rem -2.5rem;
+        }
+        .bg {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: linear-gradient(116deg, rgba(47, 54, 61, 0.17), rgba(72, 72, 72, 0.7));
+        }
+        .boat {
+            color: #FFF;
+            width: 50%;
+            height: 50%;
+            margin: 1.25rem 0 0 1.25rem;
+            -webkit-animation: boatswell 4s linear infinite;
+            animation: boatswell 4s linear infinite;
+        }
+        .boat svg{
+            width: 100%;
+            height: 100%;
+            fill: currentColor;
+        }
+        .border {
+            overflow: hidden;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .waves{position:relative;display:block;width:200rem;height:2.5rem;margin:-2rem 0 0 0;z-index:100;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjE1NSIgaGVpZ2h0PSI4NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KIDwhLS0gQ3JlYXRlZCB3aXRoIE1ldGhvZCBEcmF3IC0gaHR0cDovL2dpdGh1Yi5jb20vZHVvcGl4ZWwvTWV0aG9kLURyYXcvIC0tPgogPGc+CiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPgogIDxyZWN0IGZpbGw9Im5vbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSI4NyIgd2lkdGg9IjE1NyIgeT0iLTEiIHg9Ii0xIi8+CiAgPGcgZGlzcGxheT0ibm9uZSIgb3ZlcmZsb3c9InZpc2libGUiIHk9IjAiIHg9IjAiIGhlaWdodD0iMTAwJSIgd2lkdGg9IjEwMCUiIGlkPSJjYW52YXNHcmlkIj4KICAgPHJlY3QgZmlsbD0idXJsKCNncmlkcGF0dGVybikiIHN0cm9rZS13aWR0aD0iMCIgeT0iMCIgeD0iMCIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSIvPgogIDwvZz4KIDwvZz4KIDxnPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8ZyBpZD0ic3ZnXzkiPgogICA8ZWxsaXBzZSByeT0iMjYiIHJ4PSIyNiIgaWQ9InN2Z18xIiBjeT0iMzMuNSIgY3g9IjM0LjUiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSIjZmZmIi8+CiAgIDxlbGxpcHNlIHJ5PSIyNiIgcng9IjI2IiBpZD0ic3ZnXzMiIGN5PSIzMy41IiBjeD0iNjMuODY4NDkzIiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0iI2ZmZiIvPgogICA8ZWxsaXBzZSByeT0iMjYiIHJ4PSIyNiIgaWQ9InN2Z182IiBjeT0iMzMuNSIgY3g9IjkxLjcxODg4IiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0iI2ZmZiIvPgogICA8ZWxsaXBzZSByeT0iMjYiIHJ4PSIyNiIgaWQ9InN2Z183IiBjeT0iMzMuNSIgY3g9IjEyMS4wODczNzMiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSIjZmZmIi8+CiAgIDxyZWN0IGlkPSJzdmdfOCIgaGVpZ2h0PSI0NiIgd2lkdGg9IjE0MC4wMDAwMDYiIHk9IjMyLjUiIHg9IjcuNSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9IiNmZmYiLz4KICA8L2c+CiA8L2c+Cjwvc3ZnPg==);
+            background-repeat:repeat-x;
+            background-size: 7.5rem;
+            -webkit-animation:sail 4s linear infinite;
+            animation:sail 4s linear infinite
+        }
+        #loading p{
+            text-align: center;
+            padding: 10px 0 0 0;
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 1px;
+        }
+        @-webkit-keyframes boatswell{0%{transform:translate3d(0,10%,0)}50%{transform:translate3d(0,-10%,0)}100%{transform:translate3d(0,10%,0)}}
+        @keyframes boatswell{0%{transform:translate3d(0,10%,0)}50%{transform:translate3d(0,-10%,0)}100%{transform:translate3d(0,10%,0)}}
+        @-webkit-keyframes sail{from{transform:translate3d(-25rem,0,0)}to{transform:translate3d(0,0,0)}}@keyframes sail{from{transform:translate3d(-25rem,0,0)}to{transform:translate3d(0,0,0)}}
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="center">
+            <div class="border">
+                <div class="bg">
+                    <div class="boat">
+                        <svg t="1496034014570" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1096" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><defs><style type="text/css"></style></defs><path d="M943.835 580.562l-83.911 102.33 33.769 3.07s-105.4 85.958-200.568 91.074c-94.144 5.117-140.193-120.75-140.193-120.75v-210.8h126.89V382.04h-120.75v-83.91c52.188-17.396 90.05-67.538 90.05-126.89 0-73.678-60.375-134.053-134.053-134.053H512c-73.678 0-134.053 60.375-134.053 134.053 0 59.352 37.863 109.494 90.051 126.89v83.911h-120.75v63.445h126.89v210.801s-46.049 125.867-141.216 120.75c-96.19-5.116-201.591-91.074-201.591-91.074l33.769-3.07-84.935-102.33-28.652 123.82 36.839-8.187s72.654 126.89 182.148 176.009c109.494 50.142 221.034 111.54 242.524 114.61h1.023c22.513-3.07 133.03-64.468 241.5-114.61 107.448-49.119 180.102-176.009 180.102-176.009l36.84 8.187-28.653-123.82-0.001-0.001zM514.046 244.917H512c-39.908 0-72.654-32.746-72.654-73.678 0-39.909 32.746-72.655 72.654-72.655h3.07c39.91 0 72.655 32.746 72.655 72.655 0 40.932-32.746 73.678-72.655 73.678h-1.024z" p-id="1097"></path></svg>
+                    </div>
+                    <div class="waves"></div>
+                </div>
+            </div>
+            <p>极速加载中...</p>
+        </div>
+    </div>
+</body>
+</html>
